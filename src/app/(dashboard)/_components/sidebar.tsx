@@ -7,7 +7,6 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-  SidebarGroupAction,
   SidebarFooter,
 } from "@/components/ui/sidebar";
 import { SignOutButton } from "@clerk/nextjs";
