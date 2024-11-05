@@ -3,6 +3,7 @@ import { internalMutation } from "../_generated/server";
 import { authenticatedMutation, authenticatedQuery } from "./helpers";
 import { v } from "convex/values";
 
+
 export const list = authenticatedQuery({
   args: {
     directMessage: v.id("directMessages"),
@@ -23,9 +24,11 @@ export const list = authenticatedQuery({
         }
         return user.username;
       })
+
     );
   },
 });
+
 
 export const upsert = authenticatedMutation({
   args: {
@@ -75,4 +78,3 @@ export const remove = internalMutation({
     }
   },
 });
-

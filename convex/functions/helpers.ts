@@ -2,6 +2,7 @@ import { customCtx, customQuery, customMutation } from "convex-helpers/server/cu
 import { getCurrentUser } from "./user";
 import { mutation, query } from "../_generated/server";
 
+
 export const authenticatedQuery = customQuery(
     query,
     customCtx(async (ctx) => {
@@ -22,3 +23,4 @@ export const authenticatedMutation = customMutation(
         return { user };
     })
 );
+

@@ -2,6 +2,7 @@ import { v } from "convex/values";
 import { internal } from "../_generated/api";
 import { authenticatedMutation, authenticatedQuery } from "./helpers";
 
+
 export const list = authenticatedQuery({
   args: {
     directMessage: v.id("directMessages"),
@@ -88,8 +89,10 @@ export const remove = authenticatedMutation({
   },
 });
 
+
 export const generateUploadUrl = authenticatedMutation({
   handler: async (ctx) => {
     return await ctx.storage.generateUploadUrl();
   },
 });
+

@@ -48,7 +48,6 @@ http.route({
 const validateRequest = async (req: Request) => {
     const headers = req.headers;
 
-    // Request content
     const text = await req.text();
 
     const svix_id = headers.get('svix-id');
@@ -56,7 +55,6 @@ const validateRequest = async (req: Request) => {
     const svix_signature = headers.get('svix-signature');
 
     try {
-        // Initialize webhook
         const webhook = new Webhook(process.env.CLERK_WEBHOOK_SECRET!);
         return webhook.verify(text, {
             'svix-id': svix_id!,
@@ -68,5 +66,6 @@ const validateRequest = async (req: Request) => {
         return null;
     }
 };
+
 
 export default http;

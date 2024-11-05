@@ -3,6 +3,7 @@ import { authenticatedMutation, authenticatedQuery } from "./helpers";
 import { QueryCtx } from "../_generated/server";
 import { v } from 'convex/values';
 
+
 export const listPending = authenticatedQuery({
     handler: async (ctx) => {
         const friends = await ctx.db
